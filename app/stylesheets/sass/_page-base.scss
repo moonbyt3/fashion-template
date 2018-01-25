@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+	font-family: Lato;
+	font-size: 14px;
+}
+h1 {
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 0.3em;
+	font-size: 1.5em;
+}
+h2,h3,h4,h5 {
+	letter-spacing: 0.3em;
+	text-transform: uppercase;
+}
+body {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+main {
+	@extend %center;
+}
+input[type="text"], input[type="password"] {
+	width: 60%;
+	margin: 0.4em -4px;
+	padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #464a4c;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    @include border-radius(.25rem);
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+
+//change color of radio button
+input[type='radio'] {
+        -webkit-appearance: none;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        outline: none;
+        border: 2px solid black;
+        &:before {
+        	content: '';
+        	display: block;
+        	width: 60%;
+        	height: 60%;
+        	margin: 20% auto;
+        	border-radius: 50%;
+   		}
+   		&:checked:before {
+        	background: black;
+    	}
+    	&:checked {
+     		background-color: white;
+    	}
+}
+
+%center {
+	width: 80%;
+	margin: auto;
+}

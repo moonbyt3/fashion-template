@@ -1,0 +1,489 @@
+@import 'mixins/media-responsive';
+@import 'mixins/border-radius-mixin';
+
+$lightGray : lightGray;
+$notificationColor : #dc2741;
+
+@import 'page-base';
+
+
+// mobile first design
+// coded by: Milorad Jekic
+
+header {
+	//hidden, media querie sets it to be visible
+	.top-nav {
+		text-align: right;
+		margin-right: 1em;
+		a {
+			font-size: 0.6em;
+			font-weight: 600;
+			text-transform: none;
+			margin-left: 1em;
+			color: black;
+		}
+	}
+	//hidden, media querie sets it to be visible
+	.logo {
+		width: 50%;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 800;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1em;
+		letter-spacing: 0.7em;
+	}
+
+	nav {
+		overflow: hidden;
+		width: 100%;
+		margin: 0;
+		a {
+			font-weight: 900;
+			letter-spacing: 0.3em;
+			color: black;
+		}
+		h2 {
+			font-size: 80%;
+		}
+		
+		// Mega menu
+		// For both desktop and tablet
+		li>.drop-content{
+			display: none;
+			position: absolute;
+			left: 0;
+			background-color: #f9f9f9;
+			width: 100%;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+			#promo {
+				color: $notificationColor;
+			}
+			ul {
+				text-align: left;
+				li {
+					vertical-align: top;
+					width: 17%;
+					text-align: left;
+					a {
+						font-size: 85%;
+						letter-spacing: 0;
+						font-weight: 400;
+						&:hover {
+							color: gray;
+						}
+					}
+				}
+			}
+			img {
+				margin-top: 1em;
+				width: 20%;
+			}
+		}
+		li:hover .drop-content {
+		    display: block;
+		}
+	}
+
+	.holder {
+		display: flex;
+		align-items: center;
+	}
+
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	    margin: 1.5em;
+	    .dropbtn {
+	    	display: inline-block;
+	        div {
+	        	width: 35px;
+	        	height: 4px;
+	        	background-color: black;
+	        	margin: 8px 0;
+	        }
+	    }
+	    &:hover .dropdown-content {
+			display: block;	
+	    }
+	    .dropdown-content {
+	        display: none;
+	        position: absolute;
+	        background-color: #f9f9f9;
+	        min-width: 160px;
+	        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	        z-index: 1;
+	        a {
+				color: black;
+				padding: 12px 16px;
+				text-decoration: none;
+				display: block;
+				& a:hover {
+					background-color: #f1f1f1;
+				}
+	        }
+	    }
+	}
+
+	h2 {
+		margin: 0 auto;
+	}
+	// dropdown for mobile only
+	nav {
+		@extend %center;
+		text-align: center;
+		ul {
+			li {
+				display: inline-block;
+				width: (1/7);
+				margin: 1em;
+			}
+		}
+	}
+}
+
+.jumbotron {
+	background-image: url('../../img/header.jpg');
+	background-repeat: no-repeat;
+    text-align: center;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+	.jumboContent {
+		padding-top: 150px;
+		padding-bottom: 1vh;
+		color: white;
+		h1 {
+			font-size: 2em;
+		}
+	}
+}
+
+.products {
+	h1 {
+		font-size: 1.5em;
+	}
+	.product-box {
+		display: inline-block;
+		width: 30.7%;
+		margin: 0.2em;
+		img {
+			width: 100%;
+		}
+		h5,p {
+			text-align: center;
+			margin: 0;
+		}
+		h5 {
+			margin-top: 0.5em;
+			font-stretch: 0.7em;
+			font-weight: 500;
+			
+		}
+		span {
+			text-decoration: line-through;
+			font-size: 0.8em;
+		}
+		i {
+			color: red;
+		}
+	}
+}
+
+.more-info {
+	article>p, ul>li {
+		font-size: 80%;
+		line-height: 1.5em;
+	}
+}
+
+//
+/* CAROUSEL */
+//
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+    @extend %center;
+    text-align: center;
+    div {
+    	display: inline-block;
+    	width: 44%;
+    	margin: 0.4em;
+    	img {
+    		width: 100%;
+    	}
+    	p {
+    		text-transform: uppercase;
+    		letter-spacing: 0.2em;
+    	}
+    }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.login-form {
+	box-sizing: border-box;
+	h4 {
+		font-size: 1.2em;
+		margin-bottom: 0.3em;
+	}
+	label {
+		margin-right: 1em;
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: 800;
+		width: 34%;
+	}
+	p[class="notification"] {
+		text-align: right;
+		margin-right: 0.7em;
+		color: red;
+	}
+	button {
+		width: 100%;
+		background-color: black;
+		color: white;
+		letter-spacing: 0.3em;
+		word-spacing: 0.3em;
+		padding: 6px 12px;
+		margin-top: 0.5em;
+		margin-bottom: 1em;
+		font-size: 10px;
+		font-weight: 700;
+		line-height: 1.42857143;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		cursor: pointer;
+		border: 1px solid transparent;
+		border-radius: 3px;
+	}
+	i {
+		color: red;
+	}
+}
+.benefits {
+	background-color: $lightGray;
+	padding: 0.5em;
+	h4 {
+		font-weight: 700;
+		margin: 0;
+		font-size: 0.7em;
+    	text-align: center;
+	}
+	p {
+		font-size: 0.7em;
+		margin: 1em;
+	}
+}
+.newsletter {
+	h1 {
+		font-size: 0.7em;
+		text-align: center;
+		font-weight: bolder;
+	}
+	.holder {
+		width: 80%;
+		margin: 0 auto;
+		text-align: center;
+		button {
+			background-color: black;
+			color: white;
+			margin: 0.4em auto;
+			padding: .57rem .75rem;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			border: none;
+		}
+	}
+}
+footer {
+	@extend %center;
+	color: $lightGray;
+	p {
+		font-size: 80%;
+		margin: 0;
+		text-transform: uppercase;
+	}
+	i,a {
+		@extend p;
+		margin-right: 3em;
+		text-decoration: none;
+		color: $lightGray;
+	}
+}
+// Media query for medium screens 
+@include tablet {
+	header {
+		.top-nav {
+			display: block;
+		}
+		.logo {
+			display: block;
+		}
+		nav {
+			display: block;
+			ul {
+				margin: 0;
+				li {
+					margin:16px;
+					a {
+						font-size: 70%;
+					}
+				}
+				img {
+					display: none;
+				}
+				.drop-content>ul>li {
+					width: 20%;
+				}
+			}
+		}
+		div[class="holder"]{
+			display: none;
+		}
+	}
+	.jumboContent {
+		h1 {
+			font-size: 3em !important;
+		}
+	}
+	.mySlides {
+		div {
+			margin: 0.2em;
+		}
+	}
+	.benefits {
+		width: 46%;
+		display: inline-block;
+		position: absolute;
+		margin: 0 1em;
+		line-height: 1.7;
+		h1, p {
+			font-size: 1em;
+		}
+	}
+	.login-form {
+		form {
+			width: 48%;
+			display: inline-block;
+		}
+	}
+	.more-info {
+		article>p, ul>li {
+			font-size: 100%;
+			line-height: 1.7;
+		}
+	}
+}
+// Media query for desktop screens
+@include desktop {
+	header {
+		.top-nav {
+			display: block;
+		}
+		.logo {
+			display: block;
+		}
+		nav {
+			display: block;
+			li>a {
+				font-size: 0.8em;
+			}
+		}
+		div[class="holder"]{
+			display: none;
+		}
+	}
+	.jumboContent {
+		h1 {
+			margin-top: 0;
+			font-size: 4em !important;
+			font-weight: 400;
+		}
+	}
+	.more-info {
+		article>p, ul>li {
+			font-size: 1em;
+		}
+	}
+	.mySlides {
+		div {
+			width: 23%;
+		}
+	}
+	.benefits {
+		width: 40%;
+		display: inline-block;
+		position: absolute;
+		margin: 0 1em;
+		line-height: 1.7;
+		p {
+			font-size: 90%;
+		}
+		h4 {
+			font-size: 1.2em;
+		}
+	}
+	.slideshow-container img {
+		margin-right: 0.2em;
+	}
+	.login-form {
+		form {
+			width: 48%;
+			display: inline-block;
+			border-top: 1px solid black;
+		}
+	}
+	.bottom-separator {
+		display: block;
+	}
+	.newsletter {
+		float: right;
+		width: 30%;
+		margin-right: 3%;
+	}
+}
