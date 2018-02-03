@@ -336,14 +336,15 @@ header {
 	background-color: $lightGray;
 	padding: 0.5em;
 	text-align: justify;
+	vertical-align: top;
 	h4 {
 		font-weight: 700;
 		margin: 0;
-		font-size: 0.7em;
+		font-size: 70%;
     	text-align: center;
 	}
 	p {
-		font-size: 0.7em;
+		font-size: 70%;
 		margin: 1em;
 	}
 }
@@ -361,7 +362,7 @@ header {
 			background-color: black;
 			color: white;
 			margin: 0.4em auto;
-			padding: .57rem .75rem;
+			padding: .57em .75em;
 			border-top-right-radius: 4px;
 			border-bottom-right-radius: 4px;
 			border: none;
@@ -508,7 +509,7 @@ footer {
 			font-size: 90%;
 		}
 		h4 {
-			font-size: 1.2em;
+			font-size: 120%;
 		}
 	}
 	.slideshow-container img {
