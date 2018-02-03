@@ -230,7 +230,8 @@ header nav {
   .mySlides div {
     display: inline-block;
     width: 44%;
-    margin: 0.4em; }
+    margin: 0.4em;
+    vertical-align: top; }
     .mySlides div img {
       width: 100%; }
     .mySlides div p, .mySlides div footer i, footer .mySlides div i, .mySlides div footer a, footer .mySlides div a {
@@ -271,7 +272,8 @@ header nav {
     opacity: 1; } }
 
 .login-form {
-  box-sizing: border-box; }
+  width: 93%;
+  margin: auto; }
   .login-form h4 {
     font-size: 1.2em;
     margin-bottom: 0.3em; }
@@ -370,15 +372,17 @@ footer {
     .jumbotron .jumboContent h1 {
       font-size: 36px; }
   .mySlides div {
-    margin: 0.2em; }
+    margin: 0.2em;
+    width: 23%; }
+    .mySlides div img {
+      min-height: 120px; }
   .benefits {
     width: 46%;
     display: inline-block;
-    position: absolute;
     margin: 0 1em;
     line-height: 1.7; }
     .benefits h1, .benefits p, .benefits footer i, footer .benefits i, .benefits footer a, footer .benefits a {
-      font-size: 1em; }
+      font-size: 90%; }
   .login-form form {
     width: 48%;
     display: inline-block; }

@@ -237,13 +237,15 @@ header {
 
 /* Hide the images by default */
 .mySlides {
+	
     display: none;
     @extend %center;
     text-align: center;
     div {
     	display: inline-block;
     	width: 44%;
-    	margin: 0.4em;
+		margin: 0.4em;
+		vertical-align: top;
     	img {
     		width: 100%;
     	}
@@ -289,7 +291,8 @@ header {
 }
 
 .login-form {
-	box-sizing: border-box;
+	width: 93%;
+	margin: auto;
 	h4 {
 		font-size: 1.2em;
 		margin-bottom: 0.3em;
@@ -421,16 +424,19 @@ footer {
 	.mySlides {
 		div {
 			margin: 0.2em;
+			width: 23%;
+			img {
+				min-height: 120px;
+			}
 		}
 	}
 	.benefits {
 		width: 46%;
 		display: inline-block;
-		position: absolute;
 		margin: 0 1em;
 		line-height: 1.7;
 		h1, p {
-			font-size: 1em;
+			font-size: 90%;
 		}
 	}
 	.login-form {
