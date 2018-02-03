@@ -91,6 +91,8 @@ header nav {
     color: black; }
   header nav h2 {
     font-size: 80%; }
+  header nav ul {
+    padding: 0; }
   header nav li > .drop-content {
     display: none;
     position: absolute;
@@ -193,8 +195,7 @@ header nav {
   width: 30%;
   margin: 0.2em; }
   .products .product-box img {
-    width: 100%;
-    max-height: 254px; }
+    width: 100%; }
   .products .product-box h5, .products .product-box p, .products .product-box footer i, footer .products .product-box i, .products .product-box footer a, footer .products .product-box a {
     text-align: center;
     margin: 0;
@@ -319,7 +320,7 @@ header nav {
     margin: 1em; }
 
 .newsletter h1 {
-  font-size: 0.7em;
+  font-size: 70%;
   text-align: center;
   font-weight: bolder; }
 
@@ -347,29 +348,27 @@ footer {
     text-decoration: none;
     color: lightGray; }
 
-@media screen and (min-device-width: 768px) and (max-device-width: 1223px) {
+@media screen and (min-width: 640px) and (max-width: 1223px) {
   header .top-nav {
     display: block; }
   header .logo {
     display: block; }
   header nav {
     display: block; }
-    header nav ul {
-      margin: 0; }
-      header nav ul li {
-        margin: 16px; }
-        header nav ul li a {
-          font-size: 70%; }
-      header nav ul img {
-        display: none; }
-      header nav ul .drop-content > ul > li {
-        width: 20%; }
+    header nav ul li {
+      margin: 10px; }
+      header nav ul li a {
+        font-size: 70%; }
+    header nav ul img {
+      display: none; }
+    header nav ul .drop-content > ul > li {
+      width: 20%; }
   header div[class="holder"] {
     display: none; }
-  .jumboContent {
+  .jumbotron .jumboContent {
     min-height: 400px; }
-    .jumboContent h1 {
-      font-size: 3em !important; }
+    .jumbotron .jumboContent h1 {
+      font-size: 36px; }
   .mySlides div {
     margin: 0.2em; }
   .benefits {
@@ -391,21 +390,25 @@ footer {
     display: block; }
   header .logo {
     display: block;
-    font-size: 25px;
     font-stretch: 0;
     letter-spacing: 0.2em; }
+    header .logo a {
+      font-size: 25px; }
   header nav {
     display: block; }
-    header nav li > a {
-      font-size: 0.8em; }
   header div[class="holder"] {
     display: none; }
-  .jumboContent {
+  .jumbotron .jumboContent {
     min-height: 812px; }
-    .jumboContent h1 {
+    .jumbotron .jumboContent h1 {
       margin-top: 0;
-      font-size: 4em !important;
-      font-weight: 400; }
+      font-size: 500%;
+      font-weight: 400;
+      letter-spacing: 0.3em; }
+  .products .product-box img {
+    min-height: 400px; }
+  .products .product-box h5 {
+    letter-spacing: 0.2em; }
   .mySlides div {
     width: 23%; }
   .benefits {
