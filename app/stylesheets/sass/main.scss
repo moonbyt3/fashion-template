@@ -4,6 +4,11 @@
 $lightGray : lightGray;
 $notificationColor : #dc2741;
 
+$fontSize-heading: 36px;
+$fontSize-tittle: 25px;
+$fontSize-subtittle: 15px;
+$fontSize-nav-links: 12px;
+
 @import 'page-base';
 
 
@@ -11,19 +16,19 @@ $notificationColor : #dc2741;
 // coded by: Milorad Jekic
 
 header {
-	//hidden, media querie sets it to be visible
+	//hidden, media query sets it to be visible
 	.top-nav {
 		text-align: right;
 		margin-right: 1em;
 		a {
-			font-size: 0.6em;
+			font-size: $fontSize-nav-links;
 			font-weight: 600;
 			text-transform: none;
 			margin-left: 1em;
 			color: black;
 		}
 	}
-	//hidden, media querie sets it to be visible
+	//hidden, media query sets it to be visible
 	.logo {
 		width: 50%;
 		text-transform: uppercase;
@@ -33,6 +38,9 @@ header {
 		margin-right: auto;
 		margin-top: 1em;
 		letter-spacing: 0.7em;
+		a:visited {
+			color: black;
+		}
 	}
 
 	nav {
@@ -148,18 +156,27 @@ header {
 	background-image: url('../../img/header.jpg');
 	background-repeat: no-repeat;
     text-align: center;
-    height: 450px;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    min-height: 234px;
     background-position: top center;
     background-size: cover;
     position: relative;
 	.jumboContent {
-		padding-top: 150px;
-		padding-bottom: 1vh;
 		color: white;
+		transform: translate(0, 50%);
 		h1 {
-			font-size: 2em;
+			font-size: $fontSize-heading;
+			letter-spacing: 0.1em;
+			margin-top: 0;
+			font-weight: 400;
+		}
+		h5 {
+			margin-top: 0;
+			margin-bottom: 0.5em;
+			font-weight: 400;
+			text-transform: lowercase;
+		}
+		small {
+			letter-spacing: 0.1em;
 		}
 	}
 }
@@ -170,19 +187,21 @@ header {
 	}
 	.product-box {
 		display: inline-block;
-		width: 30.7%;
+		width: 30%;
 		margin: 0.2em;
 		img {
 			width: 100%;
+			max-height: 254px;
 		}
 		h5,p {
 			text-align: center;
 			margin: 0;
+			letter-spacing: 0;
 		}
 		h5 {
 			margin-top: 0.5em;
 			font-stretch: 0.7em;
-			font-weight: 500;
+			font-weight: 300;
 			
 		}
 		span {
@@ -196,8 +215,11 @@ header {
 }
 
 .more-info {
-	article>p, ul>li {
-		font-size: 80%;
+	article>p {
+		text-align: justify;
+		line-height: 1.5em;
+	}
+	ul>li {
 		line-height: 1.5em;
 	}
 }
@@ -308,6 +330,7 @@ header {
 .benefits {
 	background-color: $lightGray;
 	padding: 0.5em;
+	text-align: justify;
 	h4 {
 		font-weight: 700;
 		margin: 0;
@@ -387,6 +410,7 @@ footer {
 		}
 	}
 	.jumboContent {
+		min-height: 400px;
 		h1 {
 			font-size: 3em !important;
 		}
@@ -414,7 +438,6 @@ footer {
 	}
 	.more-info {
 		article>p, ul>li {
-			font-size: 100%;
 			line-height: 1.7;
 		}
 	}
@@ -427,6 +450,9 @@ footer {
 		}
 		.logo {
 			display: block;
+			font-size: $fontSize-tittle;
+			font-stretch: 0;
+			letter-spacing: 0.2em;
 		}
 		nav {
 			display: block;
@@ -439,17 +465,18 @@ footer {
 		}
 	}
 	.jumboContent {
+		min-height: 812px;
 		h1 {
 			margin-top: 0;
 			font-size: 4em !important;
 			font-weight: 400;
 		}
 	}
-	.more-info {
-		article>p, ul>li {
-			font-size: 1em;
-		}
-	}
+	// .more-info {
+	// 	article>p, ul>li {
+	// 		font-size: 1em;
+	// 	}
+	// }
 	.mySlides {
 		div {
 			width: 23%;
