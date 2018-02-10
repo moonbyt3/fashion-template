@@ -16,7 +16,8 @@ body {
   margin: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black; }
 
 input[type="text"], input[type="password"] {
   width: 60%;
@@ -187,28 +188,30 @@ header nav {
     .jumbotron .jumboContent small {
       letter-spacing: 0.1em; }
 
-.products h1 {
-  font-size: 1.5em; }
-
-.products .product-box {
-  display: inline-block;
-  width: 30%;
-  margin: 0.2em; }
-  .products .product-box img {
-    width: 100%; }
-  .products .product-box h5, .products .product-box p, .products .product-box footer i, footer .products .product-box i, .products .product-box footer a, footer .products .product-box a {
-    text-align: center;
-    margin: 0;
-    letter-spacing: 0; }
-  .products .product-box h5 {
-    margin-top: 0.5em;
-    font-stretch: 0.7em;
-    font-weight: 300; }
-  .products .product-box span {
-    text-decoration: line-through;
-    font-size: 0.8em; }
-  .products .product-box i {
-    color: red; }
+.products {
+  text-align: center; }
+  .products h1 {
+    text-align: left;
+    font-size: 1.5em; }
+  .products .product-box {
+    display: inline-block;
+    width: 30%;
+    margin: 0.2em; }
+    .products .product-box img {
+      width: 100%; }
+    .products .product-box h5, .products .product-box p, .products .product-box footer i, footer .products .product-box i, .products .product-box footer a, footer .products .product-box a {
+      text-align: center;
+      margin: 0;
+      letter-spacing: 0; }
+    .products .product-box h5 {
+      margin-top: 0.5em;
+      font-stretch: 0.7em;
+      font-weight: 300; }
+    .products .product-box span {
+      text-decoration: line-through;
+      font-size: 0.8em; }
+    .products .product-box i {
+      color: red; }
 
 .more-info article > p, .more-info footer article > i, footer .more-info article > i, .more-info footer article > a, footer .more-info article > a {
   text-align: justify;
